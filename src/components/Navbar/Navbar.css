@@ -1,0 +1,14 @@
+nav{
+  background-color: black;
+  height: 90px;
+}
+
+.links{
+  text-align: center;
+}
+.nav-links{
+  text-decoration: none;
+  margin: 5rem;
+  color: white;
+  font-size: xx-large;
+}

@@ -1,0 +1,29 @@
+.card{
+  width: 400px;
+  height: 400px;
+  background-color: black;
+  border-color: white;
+  color: white;
+  margin: 2rem;
+  display: inline-block;
+}
+
+.card:hover {
+  border-color: blue;
+}
+
+#image-holder{
+  width: 400px;
+  height: 200px;
+}
+
+.card-title{
+  text-align: center;
+}
+
+.card-text{
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

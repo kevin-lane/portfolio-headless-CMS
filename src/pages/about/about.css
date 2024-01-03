@@ -1,0 +1,9 @@
+.about-blocks{
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+}
+
+#skill-list{
+  list-style-type: none;
+}

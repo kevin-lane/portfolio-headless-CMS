@@ -1,0 +1,27 @@
+body{
+  background-color: black;
+  color: white;
+}
+
+#sad-404{
+  margin-left: 50%;
+  margin-right: 50%;
+}
+
+#btn-container{
+  position: absolute;
+    margin: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* For the start-page */
+.home-blocks{
+  float: left;
+  width: 50%;
+}
+
+#start-page-img{
+  float: right;
+}

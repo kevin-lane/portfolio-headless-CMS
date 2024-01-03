@@ -1,0 +1,20 @@
+#contact-form{
+  width: 500px;
+}
+
+.row{
+  margin: 2rem;
+}
+
+#send-button{
+  background-color: #434343;
+}
+
+.contact-blocks{
+  display: inline-block;
+  vertical-align: top;
+}
+
+#connection-links{
+  text-align: center;
+}
