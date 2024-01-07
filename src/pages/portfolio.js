@@ -31,8 +31,10 @@ const SecondPage = () => {
       <ul>
         {data.allContentfulCourse.edges.map((edge) => {
           console.log(edge.node.image === null ? "" : edge.node.image[0].url);
+          console.log(edge.node.title);
+
           return (
-            <Link to="/">
+            <Link to={`/portfolio/${edge.node.title}`}>
               <Card
                 //Have done short-if to handle items with no images
                 image={edge.node.image === null ? "" : edge.node.image[0].url}
