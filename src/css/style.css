@@ -22,6 +22,31 @@ body{
   width: 50%;
 }
 
-#start-page-img{
+.home-blocks img {
+  width: 100%;
+  height: 100%;
+}
+
+/* #start-page-img{
   float: right;
+  width: 610px;
+  height: 610px;
+} */
+
+/* For mobile version (responsive) */
+@media screen and (max-width: 1200px) {
+  .home-blocks{
+    clear: both;
+    display: block;
+    width: 100vw;
+    padding: 2rem;
+  }
+}
+
+#intro-heading{
+  font-family: "koulen";
+}
+
+#intro-text{
+  font-family: 'Kite One';
 }

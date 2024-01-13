@@ -2,8 +2,25 @@
   display: inline-block;
   width: 50%;
   vertical-align: top;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .about-blocks{
+    display: block;
+    width: 100%;
+  }
+}
+
+.about-headings{
+  font-family: 'Koulen';
+}
+
+.about-text{
+  font-family: 'Kite One';
 }
 
 #skill-list{
   list-style-type: none;
+  font-family: 'Kite One';
 }

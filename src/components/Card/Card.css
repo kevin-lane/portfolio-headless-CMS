@@ -4,12 +4,10 @@
   background-color: black;
   border-color: white;
   color: white;
-  margin: 2rem;
+  /* margin: 2rem; */
+  margin-bottom: 2rem;
+  margin-right: 5rem;
   display: inline-block;
-}
-
-.card:hover {
-  border-color: blue;
 }
 
 #image-holder{
@@ -17,8 +15,32 @@
   height: 200px;
 }
 
+@media screen and (max-width: 550px) {
+  .card{
+    width: 300px;
+    height: 400px;
+    background-color: black;
+    border-color: white;
+    color: white;
+    margin-bottom: 2rem;
+    display: inline-block;
+  }
+
+  #image-holder{
+    width: 300px;
+    height: 200px;
+  }
+}
+
+.card:hover {
+  border-color: blue;
+}
+
+
+
 .card-title{
   text-align: center;
+  font-family: 'Koulen';
 }
 
 .card-text{
@@ -26,4 +48,5 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  font-family: 'Kite One';
 }

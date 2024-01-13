@@ -1,14 +1,42 @@
 nav{
   background-color: black;
   height: 90px;
+  width: 100vw;
 }
 
 .links{
   text-align: center;
 }
+
 .nav-links{
   text-decoration: none;
   margin: 5rem;
   color: white;
   font-size: xx-large;
+  font-family: 'Koulen';
+}
+
+/* Mobile */
+#nav-container-mobile{
+  text-align: right;
+}
+
+#links-mobile{
+  width: 100vw;
+  height: 40vh;
+  background-color: black;
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  visibility:hidden;
+}
+
+#nav-list{
+  list-style-type: none;
+}
+
+#mobile-menu{
+  background-color: black;
+  color: white;
+  border-color: black;
 }

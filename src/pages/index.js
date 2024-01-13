@@ -1,7 +1,6 @@
 import * as React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout/layout"
-
 
 //react-component
 //alla componenter under /src/pages blir automatiskt sidor
@@ -23,15 +22,13 @@ const IndexPage = () => {
   `)
   return (
     <Layout>
-
       <div className='home-blocks'>
-        <h1>{data.contentfulStartPage.title}</h1>
-        {data.contentfulStartPage.presentationText.presentationText}
+        <h1 id="intro-heading">{data.contentfulStartPage.title}</h1>
+        <p id="intro-text">{data.contentfulStartPage.presentationText.presentationText}</p>
       </div>
       <div className='home-blocks'>
-        <img id="start-page-img" src={data.contentfulStartPage.image.url} alt="Test pic" width="613px" height="613px" />
+        <img id="start-page-img" src={data.contentfulStartPage.image.url} alt="Test pic"  />
       </div>
-
     </Layout>
   )
 }

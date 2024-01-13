@@ -1,19 +1,43 @@
-#contact-form{
-  width: 500px;
-}
+/* #contact-form{
+  width: 50%;
+  font-family: 'Kite One';
+} */
 
 .row{
   margin: 2rem;
 }
 
-#send-button{
-  background-color: #434343;
-}
-
 .contact-blocks{
   display: inline-block;
   vertical-align: top;
+  margin: 2rem;
+  width: 45%;
 }
+
+.contact-headings{
+  font-family: 'Koulen';
+  text-align: center;
+}
+
+@media screen and (max-width: 630px){
+.row{
+  margin: 1rem;
+  width: 90%;
+}
+.contact-blocks{
+  display: inline-block;
+  vertical-align: top;
+  margin: 1rem;
+  width: 91%;
+}
+}
+
+
+#send-button{
+  background-color: #434343;
+  font-family: 'Koulen';
+}
+
 
 #connection-links{
   text-align: center;

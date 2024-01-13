@@ -17,35 +17,31 @@ export default function Index() {
       }
     }
   `)
-  console.log(data.allContentfulContactLinks.nodes[0].url);
   return (
     <Layout>
-
       <div className='contact-blocks' id='contact-form'>
-        <h3>Contact Me</h3>
-        <form>
-          <div class="row">
-            <div class="col">
-              <input type="text" class="form-control" placeholder="First name" />
-            </div>
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Last name" />
-            </div>
+        <h3 className='contact-headings'>Contact Me</h3>
+        <form class="row g-3">
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="First name" />
           </div>
-          <div class="row">
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Last name" />
+          </div>
+          <div class="col-12">
             <input type="text" class="form-control" placeholder="Email" />
           </div>
-          <div class="row">
+          <div class="col-12">
             <textarea class="form-control"  rows="3"  placeholder='Message'></textarea>
           </div>
-          <div class="row">
-            <button id='send-button' type="button" class="btn btn-dark">Send</button>
+          <div class="d-grid mx-auto">
+            <button id='send-button' type="button" class="btn btn-dark btn-lg">Send</button>
           </div>
         </form>
       </div>
 
       <div className='contact-blocks' id='connect-with-me'>
-        <h3>Connect with me</h3>
+        <h3 className='contact-headings'>Connect with me</h3>
         <div id='connection-links'>
           <Link to={data.allContentfulContactLinks.nodes[1].url}>
             <LinkedIn />
@@ -54,7 +50,6 @@ export default function Index() {
             <GitHub />
           </Link>
         </div>
-
       </div>
     </Layout>
   )

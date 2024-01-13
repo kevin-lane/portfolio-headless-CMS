@@ -2,7 +2,6 @@ import { Link } from 'gatsby'
 import React from 'react'
 import './Navbar.css';
 
-
 export default function Navbar() {
   return (
     <nav>
@@ -11,7 +10,6 @@ export default function Navbar() {
         <Link className='nav-links' to='/about'>About</Link>
         <Link className='nav-links' to='/portfolio'>Portfolio</Link>
         <Link className='nav-links' to='/contact'>Contact</Link>
-
       </div>
     </nav>
   )

@@ -27,12 +27,8 @@ const SecondPage = () => {
   `)
   return (
     <Layout>
-      <h1>Portfolio Page</h1>
       <ul>
         {data.allContentfulCourse.edges.map((edge) => {
-          console.log(edge.node.image === null ? "" : edge.node.image[0].url);
-          console.log(edge.node.title);
-
           return (
             <Link to={`/portfolio/${edge.node.title}`}>
               <Card

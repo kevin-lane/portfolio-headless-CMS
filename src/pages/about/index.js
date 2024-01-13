@@ -28,14 +28,14 @@ export default function Index() {
     <div>
       <Layout>
         <div className='about-blocks'>
-          <h3>{data.contentfulAbout.title}</h3>
+          <h3 className='about-headings'>{data.contentfulAbout.title}</h3>
           <div>
-            {data.contentfulAbout.description.description}
+            <p className='about-text'>{data.contentfulAbout.description.description}</p>
           </div>
         </div>
 
         <div className='about-blocks'>
-          <h3>{data.contentfulSkills.title}</h3>
+          <h3 className='about-headings'>{data.contentfulSkills.title}</h3>
             <ul id='skill-list'>
               {data.contentfulSkills.skills.map((skill) => {
                 console.log(data.contentfulAbout.image);

@@ -1,3 +1,7 @@
+/**
+ * This file handles redirects to page for an individual post
+ * when clicking on a post in Portfolio page
+ */
 exports.createPages = async ({ graphql, actions: { createPage }}) => {
   const results  = await graphql(`
     {

@@ -12,7 +12,6 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-
 module.exports = {
   siteMetadata: {
     title: `Gatsby ITHS`,
@@ -59,6 +58,23 @@ module.exports = {
       options: {
         name: `pages`,
         path: `${__dirname}/src/pages`,
+      },
+    },
+    {
+      resolve: `gatsby-omni-font-loader`,
+      options: {
+        enableListener: true,
+        preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+        web: [
+          {
+            name: `Koulen`,
+            file: `https://fonts.googleapis.com/css2?family=Koulen&display=swap`,
+          },
+          {
+            name: `Kite One`,
+            file: `https://fonts.googleapis.com/css2?family=Kite+One&display=swap`,
+          },
+        ],
       },
     },
   ],
