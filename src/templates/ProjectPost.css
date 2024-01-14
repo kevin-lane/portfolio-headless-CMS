@@ -1,0 +1,29 @@
+.post-blocks{
+  width: 40%;
+  display: inline-table;
+  margin: 2rem;
+  vertical-align: top;
+
+}
+
+@media screen and (max-width: 600px){
+
+}
+
+#project-images{
+  display: block;
+}
+
+#info-heading{
+  font-family: 'koulen';
+}
+
+#info-text{
+  font-family: 'Kite One';
+}
+
+.gatsby-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  margin-top: 2rem;
+}

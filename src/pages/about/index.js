@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from "gatsby";
 import Layout from "../../components/layout/layout";
+import { GatsbyImage } from "gatsby-plugin-image";
 import './about.css';
 
 
@@ -15,6 +16,7 @@ export default function Index() {
         }
         image {
           url
+          gatsbyImageData(width: 300, height: 300)
         }
       }
       contentfulSkills {
@@ -48,9 +50,8 @@ export default function Index() {
 
         <div>
             {data.contentfulAbout.image.map((image) => {
-              console.log(image.url);
               return(
-                <img src={image.url} alt="" height="200px" width="200px" />
+                <GatsbyImage alt="test" image={image.gatsbyImageData} />
               )
             })}
         </div>

@@ -1,8 +1,5 @@
 import * as React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
-
-
 import Layout from "../components/layout/layout.js"
 import Card from "../components/Card/Card.js";
 
@@ -18,7 +15,7 @@ const SecondPage = () => {
               description
             }
             image {
-              url
+              gatsbyImageData(width: 400, height: 200)
             }
           }
         }
@@ -29,11 +26,12 @@ const SecondPage = () => {
     <Layout>
       <ul>
         {data.allContentfulCourse.edges.map((edge) => {
+          console.log(edge.node.image[0].gatsbyImageData);
           return (
             <Link to={`/portfolio/${edge.node.title}`}>
               <Card
                 //Have done short-if to handle items with no images
-                image={edge.node.image === null ? "" : edge.node.image[0].url}
+                image={edge.node.image === null ? "" : edge.node.image[0].gatsbyImageData}
                 title={edge.node.title}
                 description={edge.node.description.description}
               />
