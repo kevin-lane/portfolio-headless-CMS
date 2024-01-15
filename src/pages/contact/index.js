@@ -3,9 +3,8 @@ import Layout from "../../components/layout/layout.js";
 import './contact.css';
 import LinkedIn from '../../components/Icons/LinkedIn.js';
 import GitHub from '../../components/Icons/GitHub.js';
-import { Link, graphql, useStaticQuery } from 'gatsby'
-
-
+import { Link, graphql, useStaticQuery } from 'gatsby';
+import { Helmet } from "react-helmet";
 
 export default function Index() {
   const data = useStaticQuery(graphql`
@@ -19,6 +18,11 @@ export default function Index() {
   `)
   return (
     <Layout>
+      {/* Added Helmet for SEO Reasons */}
+      <Helmet>
+        <title>CONTACT | Kevin Lane</title>
+        <meta name="description" content="Contact Page" />
+      </Helmet>
       <div className='contact-blocks' id='contact-form'>
         <h3 className='contact-headings'>Contact Me</h3>
         <form class="row g-3">

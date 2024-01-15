@@ -1,12 +1,16 @@
 import * as React from "react"
-
 import Layout from "../components/layout/layout.js"
-import { Link } from "gatsby"
+import { Link } from "gatsby";
+import { Helmet } from "react-helmet";
 
 //i dev mode overridas denna sida av en inbyggd 404-sida
 //Used the bootstrap class "row"
 const NotFoundPage = () => (
   <Layout>
+    <Helmet>
+      <title>404 - Page not found | Kevin Lane</title>
+      <meta name="description" content="About Page" />
+    </Helmet>
     <div class="row">
       <h1 style={{textAlign: 'center'}}>Sorry, this page does not exist!</h1>
     </div>

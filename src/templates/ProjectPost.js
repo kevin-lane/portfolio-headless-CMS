@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout/layout'
 import { GatsbyImage } from "gatsby-plugin-image"
+import { Helmet } from 'react-helmet'
 import './ProjectPost.css'
 
 export const data = graphql`
@@ -12,7 +13,7 @@ export const data = graphql`
         description
       }
       image {
-         gatsbyImageData(width: 350, height: 350)
+         gatsbyImageData(width: 1200, height: 1200)
       }
     }
 
@@ -33,6 +34,11 @@ const ProjectPost = ({ data }) => {
   console.log(data.contentfulCourse);
   return (
     <Layout>
+      {/* Added Helmet for SEO Reasons */}
+      <Helmet>
+        <title>{data.contentfulCourse.title} | Kevin Lane</title>
+        <meta name="description" content="Project Page" />
+      </Helmet>
           {
             <div>
               <div id='info-container' className='post-blocks'>

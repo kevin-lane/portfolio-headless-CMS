@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import Layout from "../../components/layout/layout";
 import { GatsbyImage } from "gatsby-plugin-image";
 import './about.css';
-
+import { Helmet } from "react-helmet"
 
 export default function Index() {
   //Using Content Type called About
@@ -16,7 +16,7 @@ export default function Index() {
         }
         image {
           url
-          gatsbyImageData(width: 300, height: 300)
+          gatsbyImageData(width: 1200, height: 800)
         }
       }
       contentfulSkills {
@@ -29,6 +29,11 @@ export default function Index() {
   return (
     <div>
       <Layout>
+        {/* Added Helmet for SEO Reasons */}
+      <Helmet>
+        <title>ABOUT | Kevin Lane</title>
+        <meta name="description" content="About Page" />
+      </Helmet>
         <div className='about-blocks'>
           <h3 className='about-headings'>{data.contentfulAbout.title}</h3>
           <div>

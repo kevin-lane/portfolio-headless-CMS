@@ -2,6 +2,7 @@ import * as React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout/layout"
 import { GatsbyImage } from "gatsby-plugin-image"
+import { Helmet } from "react-helmet"
 
 //react-component
 //alla componenter under /src/pages blir automatiskt sidor
@@ -25,6 +26,11 @@ const IndexPage = () => {
   console.log(data.contentfulStartPage.image);
   return (
     <Layout>
+      {/* Added Helmet for SEO Reasons */}
+      <Helmet>
+        <title>HOME | Kevin Lane</title>
+        <meta name="description" content="Home Page" />
+      </Helmet>
       <div className='home-blocks'>
         <h1 id="intro-heading">{data.contentfulStartPage.title}</h1>
         <p id="intro-text">{data.contentfulStartPage.presentationText.presentationText}</p>

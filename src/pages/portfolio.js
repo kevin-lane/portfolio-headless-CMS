@@ -2,6 +2,7 @@ import * as React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/layout/layout.js"
 import Card from "../components/Card/Card.js";
+import { Helmet } from "react-helmet";
 
 //sidans namn blir portfolio efter namnet på javascript-filen
 const SecondPage = () => {
@@ -24,6 +25,10 @@ const SecondPage = () => {
   `)
   return (
     <Layout>
+      <Helmet>
+        <title>PORTFOLIO | Kevin Lane</title>
+        <meta name="description" content="Portfolio Page" />
+      </Helmet>
       <ul>
         {data.allContentfulCourse.edges.map((edge) => {
           console.log(edge.node.image[0].gatsbyImageData);
