@@ -24,3 +24,8 @@
   list-style-type: none;
   font-family: 'Kite One';
 }
+
+.img-holder{
+  width: 300px;
+  height: 300px;
+}

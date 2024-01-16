@@ -16,7 +16,7 @@ export default function Index() {
         }
         image {
           url
-          gatsbyImageData(width: 1200, height: 800)
+          gatsbyImageData(width: 1200, height: 800, layout: CONSTRAINED)
         }
       }
       contentfulSkills {
@@ -56,7 +56,7 @@ export default function Index() {
         <div>
             {data.contentfulAbout.image.map((image) => {
               return(
-                <GatsbyImage alt="test" image={image.gatsbyImageData} />
+                <GatsbyImage class='img-holder' layout="constrained" alt="test" image={image.gatsbyImageData} />
               )
             })}
         </div>

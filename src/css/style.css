@@ -9,11 +9,15 @@ body{
 }
 
 #btn-container{
-  position: absolute;
-    margin: 0;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  position: relative;
+  height:50px;
+  top:50%;
+}
+
+#btn-holder{
+  position:relative;
+  height:50px;
+  top:-50%;
 }
 
 /* For the start-page */

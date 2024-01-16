@@ -1,0 +1,14 @@
+#searchInput{
+  width: 58%;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+#search-container{
+  width: 60%;
+}
+
+#search-button{
+  height: fit-content;
+  background-color: black;
+}
