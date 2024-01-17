@@ -1,16 +1,25 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import './Navbar.css';
-
+import useNavigation from '../../hooks/useNavigation';
 export default function Navbar() {
+  const topNav = useNavigation();
   return (
     <nav>
-      <div className='links'>
-        <Link className='nav-links' to='/'>Home</Link>
-        <Link className='nav-links' to='/about'>About</Link>
-        <Link className='nav-links' to='/portfolio'>Portfolio</Link>
-        <Link className='nav-links' to='/contact'>Contact</Link>
-      </div>
+       {/* <div className='links'> */}
+
+        <ul className='nav-list'>
+          {topNav.filter(nav => nav.node.url !== "/404").map(nav => {
+            return(
+              <li key={nav.node.id} className='nav-list-item'>
+               <Link className='nav-links' to={nav.node.url}>{nav.node.pageTitle}</Link>
+              </li>
+            )
+          })}
+        </ul>
+
+{/* </div> */}
+
     </nav>
   )
 }

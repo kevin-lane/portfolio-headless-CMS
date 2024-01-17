@@ -45,7 +45,6 @@ export default function Index() {
           <h3 className='about-headings'>{data.contentfulSkills.title}</h3>
             <ul id='skill-list'>
               {data.contentfulSkills.skills.map((skill) => {
-                console.log(data.contentfulAbout.image);
                 return(
                   <li>{skill}</li>
                 )

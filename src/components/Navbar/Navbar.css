@@ -8,6 +8,14 @@ nav{
   text-align: center;
 }
 
+.nav-list{
+  list-style-type: none;
+}
+
+.nav-list-item{
+  display: inline-block;
+}
+
 .nav-links{
   text-decoration: none;
   margin: 5rem;

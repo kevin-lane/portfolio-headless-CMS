@@ -44,11 +44,6 @@ const SecondPage = () => {
   useEffect(() => {
     setAllItems(data.allContentfulCourse.edges);
   }, [])
-
-
-  console.log(allItems);
-  console.log(filteredItems);
-
   return (
     <Layout>
       <Helmet>
@@ -95,6 +90,7 @@ const SecondPage = () => {
       </ul>
     </Layout>
   )
+
 }
 
 export const Head = () => <title>Portfolio Page</title>
