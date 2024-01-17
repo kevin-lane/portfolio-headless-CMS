@@ -1,10 +1,37 @@
-import React from 'react'
-import Layout from '../../components/layout/layout'
+import React from 'react';
+import { graphql, useStaticQuery } from "gatsby";
 
-export default function index() {
+
+
+
+export default function Index() {
+
+  const data = useStaticQuery(graphql`
+  query {
+    allContentfulCmsTechnologies {
+      edges {
+        node {
+          title
+          description {
+            description
+          }
+          category
+        }
+      }
+    }
+  }
+  `)
+
   return (
-    <Layout>
-
-    </Layout>
+    <div>
+      <ul>
+      {data.allContentfulCmsTechnologies.edges.map(({node}) => {
+        console.log(node.title);
+        return(
+          <li>{node.title}</li>
+        )
+      })}
+      </ul>
+    </div>
   )
 }
