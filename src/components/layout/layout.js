@@ -7,10 +7,13 @@ import Footer from "../Footer/Footer";
 
 //Toggle between different types of navbar depending of device
 function responsiveNavbar(){
-  if (window.screen.width < 900) {
-    return <NavbarMobile />
+  if (typeof window !== "undefined") {
+    if (window.screen.width < 900) {
+      return <NavbarMobile />
+    }
+    else return <Navbar />
   }
-  else return <Navbar />
+
 }
 
 const Layout = ({ children }) => (
