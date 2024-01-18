@@ -1,10 +1,11 @@
 import React from 'react';
 import '../Footer/Footer.css';
+import CopyrightSymbol from '../Icons/CopyrightSymbol';
 
 export default function Footer() {
   return (
     <div id='footer'>
-      <p>Kevin Lane</p>
+      <span>&copy;Kevin Lane</span>
     </div>
   )
 }

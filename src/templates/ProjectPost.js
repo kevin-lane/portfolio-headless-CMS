@@ -53,7 +53,7 @@ const ProjectPost = ({ data }) => {
                       console.log(img.gatsbyImageData);
                       console.log(img);
                       return(
-                        <GatsbyImage id='project-images' alt="Kevin" image={img.gatsbyImageData}/>
+                        <GatsbyImage id='project-images' alt="Kevin" image={img.gatsbyImageData} />
                       )
                     })}
                   </div>

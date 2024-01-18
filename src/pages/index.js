@@ -18,7 +18,7 @@ const IndexPage = () => {
         }
         image {
           title
-          gatsbyImageData(width: 700, height: 700)
+          gatsbyImageData(width: 500, height: 500)
         }
       }
     }
@@ -31,6 +31,7 @@ const IndexPage = () => {
         <title>HOME | Kevin Lane</title>
         <meta name="description" content="Home Page" />
       </Helmet>
+
       <div className='home-blocks'>
         <h1 id="intro-heading">{data.contentfulStartPage.title}</h1>
         <p id="intro-text">{data.contentfulStartPage.presentationText.presentationText}</p>

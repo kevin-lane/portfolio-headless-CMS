@@ -13,7 +13,6 @@ function responsiveNavbar(){
     }
     else return <Navbar />
   }
-
 }
 
 const Layout = ({ children }) => (
@@ -23,7 +22,7 @@ const Layout = ({ children }) => (
       </header>
       <main>{children}</main>
       <footer>
-        <Footer />
+
       </footer>
     </>
 )

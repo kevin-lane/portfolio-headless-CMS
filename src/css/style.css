@@ -23,7 +23,8 @@ body{
 /* For the start-page */
 .home-blocks{
   float: left;
-  width: 50%;
+  width: 45%;
+  margin: 2rem;
 }
 
 .home-blocks img {
