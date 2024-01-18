@@ -15,7 +15,7 @@ const SecondPage = () => {
   const [filtered, setFiltered] = useState(false);
 
   //Function that only shows the searched items when user clicks on search button and sets filtered to true
-  function handleSearch(){
+  function handleSearch(event){
     setFilteredItems(data.allContentfulCourse.edges.filter((edge) => {
       return edge.node.title.toLowerCase().includes(searchQuery);
     }));
@@ -44,6 +44,7 @@ const SecondPage = () => {
   useEffect(() => {
     setAllItems(data.allContentfulCourse.edges);
   }, [])
+
   return (
     <Layout>
       <Helmet>
@@ -90,7 +91,6 @@ const SecondPage = () => {
       </ul>
     </Layout>
   )
-
 }
 
 export const Head = () => <title>Portfolio Page</title>

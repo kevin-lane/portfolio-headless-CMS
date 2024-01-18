@@ -32,12 +32,6 @@ body{
   height: 100%;
 }
 
-/* #start-page-img{
-  float: right;
-  width: 610px;
-  height: 610px;
-} */
-
 /* For mobile version (responsive) */
 @media screen and (max-width: 1200px) {
   .home-blocks{

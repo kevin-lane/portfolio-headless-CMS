@@ -4,10 +4,8 @@ import './Navbar.css';
 import useNavigation from '../../hooks/useNavigation';
 export default function Navbar() {
   const topNav = useNavigation();
-  return (
+  return(
     <nav>
-       {/* <div className='links'> */}
-
         <ul className='nav-list'>
           {topNav.filter(nav => nav.node.url !== "/404").map(nav => {
             return(
@@ -17,9 +15,6 @@ export default function Navbar() {
             )
           })}
         </ul>
-
-{/* </div> */}
-
     </nav>
   )
 }

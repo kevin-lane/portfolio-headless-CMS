@@ -16,22 +16,10 @@ export const data = graphql`
          gatsbyImageData(width: 1200, height: 1200)
       }
     }
-
-    allContentfulCourse {
-      edges {
-        node {
-          image {
-            gatsbyImageData(width: 200)
-          }
-        }
-      }
-    }
   }
 `
 
 const ProjectPost = ({ data }) => {
-  console.log(data.allContentfulCourse.edges);
-  console.log(data.contentfulCourse);
   return (
     <Layout>
       {/* Added Helmet for SEO Reasons */}
@@ -39,27 +27,22 @@ const ProjectPost = ({ data }) => {
         <title>{data.contentfulCourse.title} | Kevin Lane</title>
         <meta name="description" content="Project Page" />
       </Helmet>
-          {
+        <div>
+          <div id='info-container' className='post-blocks'>
+            <h2 id='info-heading'>{data.contentfulCourse.title}</h2>
+            <p id='info-text'>{data.contentfulCourse.description.description}</p>
+          </div>
+
+          <div id='image-container' className='post-blocks'>
             <div>
-              <div id='info-container' className='post-blocks'>
-                <h2 id='info-heading'>{data.contentfulCourse.title}</h2>
-
-                <p id='info-text'>{data.contentfulCourse.description.description}</p>
-              </div>
-
-              <div id='image-container' className='post-blocks'>
-                <div>
-                  {data.contentfulCourse.image.map((img) => {
-                      console.log(img.gatsbyImageData);
-                      console.log(img);
-                      return(
-                        <GatsbyImage id='project-images' alt="Kevin" image={img.gatsbyImageData} />
-                      )
-                    })}
-                  </div>
-              </div>
+              {data.contentfulCourse.image.map((img) => {
+                return(
+                  <GatsbyImage id='project-images' alt="Kevin" image={img.gatsbyImageData} />
+                )
+              })}
             </div>
-          }
+          </div>
+        </div>
     </Layout>
   )
 }

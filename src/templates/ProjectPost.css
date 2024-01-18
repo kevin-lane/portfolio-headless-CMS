@@ -3,11 +3,6 @@
   display: inline-table;
   margin: 2rem;
   vertical-align: top;
-
-}
-
-@media screen and (max-width: 600px){
-
 }
 
 #project-images{

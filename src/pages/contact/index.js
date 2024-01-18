@@ -23,23 +23,24 @@ export default function Index() {
         <title>CONTACT | Kevin Lane</title>
         <meta name="description" content="Contact Page" />
       </Helmet>
+
       <div className='contact-blocks' id='contact-form'>
         <h3 className='contact-headings'>Contact Me</h3>
-        <form class="row g-3">
-          <div class="col-md-6">
-            <input type="text" class="form-control" placeholder="First name" />
+        <form className="row g-3">
+          <div className="col-md-6">
+            <input type="text" className="form-control" placeholder="First name" />
           </div>
-          <div class="col-md-6">
-            <input type="text" class="form-control" placeholder="Last name" />
+          <div className="col-md-6">
+            <input type="text" className="form-control" placeholder="Last name" />
           </div>
-          <div class="col-12">
-            <input type="text" class="form-control" placeholder="Email" />
+          <div className="col-12">
+            <input type="text" className="form-control" placeholder="Email" />
           </div>
-          <div class="col-12">
-            <textarea class="form-control"  rows="3"  placeholder='Message'></textarea>
+          <div className="col-12">
+            <textarea className="form-control"  rows="3"  placeholder='Message'></textarea>
           </div>
-          <div class="d-grid mx-auto">
-            <button id='send-button' type="button" class="btn btn-dark btn-lg">Send</button>
+          <div className="d-grid mx-auto">
+            <button id='send-button' type="button" className="btn btn-dark btn-lg">Send</button>
           </div>
         </form>
       </div>

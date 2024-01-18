@@ -1,0 +1,36 @@
+#heading{
+  font-family: 'koulen';
+  text-align: center;
+}
+
+#category-checkbox{
+  border: 1px solid white;
+    width: 50%;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 5rem;
+}
+
+#list-items{
+  list-style-type: none;
+}
+
+#technology-item{
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 1rem;
+  width: 15rem;
+  height: 6rem;
+  margin: 3rem;
+  padding: 1rem;
+}
+
+#item-heading {
+  text-align: center;
+  font-family: 'koulen';
+}
+
+#item-category{
+  text-align: center;
+  font-family: 'kite one';
+}

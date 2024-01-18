@@ -23,7 +23,6 @@ const IndexPage = () => {
       }
     }
   `)
-  console.log(data.contentfulStartPage.image);
   return (
     <Layout>
       {/* Added Helmet for SEO Reasons */}

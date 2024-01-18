@@ -31,9 +31,7 @@ const NotFoundPage = () => (
           <button type="button" class="btn btn-dark">Please take me home!</button>
         </Link>
       </div>
-
     </div>
-
   </Layout>
 )
 

@@ -1,7 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby'
-import React from 'react'
 
-///Content Type Navigation used here
+///Content Type Navigation used here for this hook
 function useNavigation() {
   const { allContentfulNavigation } = useStaticQuery(graphql`
   query {

@@ -51,13 +51,12 @@ export default function Index() {
               })}
             </ul>
         </div>
-
         <div>
-            {data.contentfulAbout.image.map((image) => {
-              return(
-                <GatsbyImage class='img-holder' layout="constrained" alt="test" image={image.gatsbyImageData} />
-              )
-            })}
+          {data.contentfulAbout.image.map((image) => {
+            return(
+              <GatsbyImage class='img-holder' layout="constrained" alt="test" image={image.gatsbyImageData} />
+            )
+          })}
         </div>
       </Layout>
     </div>

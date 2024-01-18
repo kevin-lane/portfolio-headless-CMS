@@ -10,7 +10,6 @@ export default function NavbarMobileOpen() {
         <li><Link className='nav-links' to='/portfolio'>Portfolio</Link></li>
         <li><Link className='nav-links' to='/contact'>Contact</Link></li>
       </ul>
-
     </div>
   )
 }
