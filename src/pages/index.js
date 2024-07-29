@@ -22,7 +22,7 @@ const IndexPage = () => {
         }
       }
     }
-  `)
+  `);
   return (
     <Layout>
       {/* Added Helmet for SEO Reasons */}
@@ -33,7 +33,9 @@ const IndexPage = () => {
 
       <div className='home-blocks'>
         <h1 id="intro-heading">{data.contentfulStartPage.title}</h1>
-        <p id="intro-text">{data.contentfulStartPage.presentationText.presentationText}</p>
+        <p id="intro-text">{data.contentfulStartPage.presentationText.presentationText.split('.')[0]}</p>
+        <p id="intro-text">{data.contentfulStartPage.presentationText.presentationText.split('.')[1]}</p>
+        <p id="intro-text">{data.contentfulStartPage.presentationText.presentationText.split('.')[2]}</p>
       </div>
       <div className='home-blocks'>
         <GatsbyImage alt={data.contentfulStartPage.image.title} image={data.contentfulStartPage.image.gatsbyImageData} />

@@ -31,11 +31,11 @@ export default function Index() {
     alert("Message sent!");
 
     let client = contentful.createClient({
-      accessToken: process.env.CONTENTFUL_ACCESS_CMA_TOKEN
+      accessToken: process.env.CONTENTFUL_ACCESS_CMA_TOKEN || process.env.REACT_APP_CONTENTFUL_ACCESS_CMA_TOKEN
     });
 
-    client.getSpace(process.env.CONTENTFUL_SPACE_ID)
-    .then((space) => space.getEnvironment(process.env.CONTENTFUL_ENVIRONMENT || 'master'))
+    client.getSpace(process.env.CONTENTFUL_SPACE_ID || process.env.REACT_APP_CONTENTFUL_SPACE_ID)
+    .then((space) => space.getEnvironment(process.env.CONTENTFUL_ENVIRONMENT || process.env.REACT_APP_CONTENTFUL_ENVIRONMENT || 'master'))
     .then((environment) => environment.createEntry('message', {
       fields: {
         email: {
@@ -54,6 +54,9 @@ export default function Index() {
     }))
     .then((entry) => console.log(entry))
     .catch(console.error)
+
+    console.log('Access Token:', process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN);
+    console.log('CMA Token:', process.env.REACT_APP_CONTENTFUL_ACCESS_CMA_TOKEN);
 
   };
   return (
