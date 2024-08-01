@@ -1,7 +1,3 @@
 [build]
   command = "npm run build"
   publish = "public"
-
-[context.production.environment]
-  REACT_APP_CONTENTFUL_ACCESS_TOKEN = "zMxv4KUgpvraHQ2CYC-9wOScHO-q-pc-2Sd25exK9yk"
-  REACT_APP_CONTENTFUL_SPACE_ID = "5gsmyf8fyuzq"
