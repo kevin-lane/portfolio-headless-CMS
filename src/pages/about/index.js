@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from "gatsby";
 import Layout from "../../components/layout/layout";
-import { GatsbyImage } from "gatsby-plugin-image";
 import './about.css';
 import { Helmet } from "react-helmet"
 
@@ -23,9 +22,24 @@ export default function Index() {
         title
         skills
       }
+      allContentfulEducation {
+        nodes {
+          program
+          institution
+          from(formatString: "yyyy")
+          to(formatString: "yyyy")
+        }
+      }
+      allContentfulWorkExperience {
+        nodes {
+          jobTitle
+          employer
+          from(formatString: "yyyy-MM")
+          to(formatString: "yyyy-MM")
+        }
+      }
     }
   `)
-
   return (
     <div>
       <Layout>
@@ -40,7 +54,6 @@ export default function Index() {
             <p className='about-text'>{data.contentfulAbout.description.description}</p>
           </div>
         </div>
-
         <div className='about-blocks'>
           <h3 className='about-headings'>{data.contentfulSkills.title}</h3>
             <ul id='skill-list'>
@@ -51,12 +64,33 @@ export default function Index() {
               })}
             </ul>
         </div>
-        <div>
-          {data.contentfulAbout.image.map((image) => {
-            return(
-              <GatsbyImage class='img-holder' layout="constrained" alt="test" image={image.gatsbyImageData} />
-            )
-          })}
+        <div className='about-blocks'>
+          <h3 className='about-headings'>Education</h3>
+            <ul id='skill-list'>
+              {data.allContentfulEducation.nodes.map((education) => {
+                return (
+                  <>
+                    <p style={{color: '#8F9B43'}}>{education.from} - {education.to}</p>
+                    <p>{education.program}, {education.institution}</p>
+                  </>
+                )
+              }
+              )}
+            </ul>
+        </div>
+        <div className='about-blocks'>
+          <h3 className='about-headings'>Work Experience</h3>
+            <ul id='skill-list'>
+              {data.allContentfulWorkExperience.nodes.map((education) => {
+                return (
+                  <>
+                    <p style={{color: '#8F9B43'}}>{education.from} - {education.to}</p>
+                    <p>{education.jobTitle}  @  {education.employer}</p>
+                  </>
+                )
+              }
+              )}
+            </ul>
         </div>
       </Layout>
     </div>

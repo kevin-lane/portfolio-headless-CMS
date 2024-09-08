@@ -1,0 +1,76 @@
+.profile-image{
+  border-radius: 50%;
+  width: 170px;
+  height: 170px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.profile-card{
+  background-image: linear-gradient(180deg, #2B2A2A, #525252, #565656);
+  width: 350px;
+  height: 630px;
+  position: absolute;
+  border-radius: 20px;
+  border: 1px solid white;
+}
+
+#get-in-touch-btn{
+  width: 180px;
+  height: 50px;
+  display: block;
+  margin: auto;
+  font-family: 'koulen';
+  font-size: x-large;
+  background-image: linear-gradient(90deg, black, #757575);
+  animation: colorFade 5s infinite;
+  color: white;
+  border: none;
+}
+
+@media screen and (max-width: 580px) {
+  .profile-card{
+    width: 70%;
+    position: relative;
+    left: 2rem;
+  }
+}
+@media screen and (max-width: 400px){
+  .profile-card{
+    left: 1rem;
+  }
+}
+
+@keyframes colorFade {
+  0%{
+    background-image: linear-gradient(360deg, black, #757575);
+  }
+  25%{
+    background-image: linear-gradient(90deg, black, #757575);
+  }
+  50% {
+    background-image: linear-gradient(180deg, black, #757575);
+  }
+  75%{
+    background-image: linear-gradient(270deg, black, #757575);
+  }
+  100%{
+    background-image: linear-gradient(360deg, black, #757575);
+  }
+}
+
+#contact-links{
+  display: flex;
+    justify-content: center;
+    margin: 2rem;
+    gap: 7rem;
+}
+
+#location{
+  display: block;
+  text-align: center;
+  font-family: 'koulen';
+  font-size: 32px;
+  justify-content: center;
+}

@@ -1,3 +1,7 @@
+.contact-page{
+  display: flex;
+}
+
 #contact-form{
   width: 50%;
   font-family: 'Kite One';
@@ -20,6 +24,9 @@
 }
 
 @media screen and (max-width: 630px){
+  .contact-page{
+    display: block;
+  }
 .row{
   margin: 1rem;
   width: 90%;
@@ -28,7 +35,14 @@
   display: inline-block;
   vertical-align: top;
   margin: 1rem;
-  width: 91%;
+  width: 80%;
+}
+#contact-form {
+  width: 80%;
+  font-family: 'Kite One';
+}
+#connect-buttons{
+  text-align: center;
 }
 }
 

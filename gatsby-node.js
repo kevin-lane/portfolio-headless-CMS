@@ -10,6 +10,11 @@ exports.createPages = async ({ graphql, actions: { createPage }}) => {
         title
       }
     }
+        allContentfulProject {
+    nodes {
+      title
+    }
+  }
   }
   `
   )
@@ -25,5 +30,14 @@ exports.createPages = async ({ graphql, actions: { createPage }}) => {
         title: node.title
       }
     })
-  })
+  });
+  results.data.allContentfulProject.nodes.forEach(node => {
+    createPage({
+      path: `/portfolio/${node.title}`,
+      component: require.resolve("./src/templates/ProjectPost.js"),
+      context: {
+        title: node.title
+      }
+    })
+  });
 }

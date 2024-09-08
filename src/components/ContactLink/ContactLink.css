@@ -1,0 +1,24 @@
+.contact-link-card{
+  width: 230px;
+  height: 180px;
+  border-radius: 2rem;
+  background-image: linear-gradient(90deg, #8F9B43, #2B2B2B);
+  text-align: center;
+  display: inline-block;
+  margin: 2rem;
+}
+
+#icon-holder{
+  position: relative;
+  top: 30%;
+}
+#text-holder{
+  position: relative;
+    top: 3rem;
+}
+#link-text{
+  position: relative;
+  font-family: 'Kite One';
+  text-decoration: none;
+  color: white;
+}

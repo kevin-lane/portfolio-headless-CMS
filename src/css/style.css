@@ -32,6 +32,10 @@ body{
   height: 100%;
 }
 
+.left-block{
+  margin-left: 2rem;
+}
+
 /* For mobile version (responsive) */
 @media screen and (max-width: 1200px) {
   .home-blocks{
@@ -44,6 +48,93 @@ body{
 
 #intro-heading{
   font-family: "koulen";
+  font-size: xx-large;
+  margin: 1rem;
+}
+
+.job-titles{
+  overflow: hidden;
+  height: 92px;
+}
+
+#job-title{
+  top: 0;
+  margin: 0 0 2rem 0;
+  font-family: 'Kite One';
+  color: #7FFF00;
+  background-color: #0000;
+  font-size: 3em;
+  width: fit-content;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  animation: slide 4s steps(3) infinite;
+}
+
+#more-projects-btn{
+  width: 180px;
+  height: 50px;
+  position: relative;
+  top: 1rem;
+  left: 20rem;
+  font-family: 'koulen';
+  font-size: x-large;
+  background-image: linear-gradient(90deg, black, #757575);
+  animation: colorFlip 5s infinite;
+  color: white;
+  border: 1px solid white;
+}
+
+@media screen and (max-width: 720px){
+  /* Disable horizontal scroll because nothing is hiding horizontally */
+  html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .job-titles{
+    overflow: hidden;
+    height: 50px;
+  }
+  #job-title{
+    font-size: 2rem;
+    overflow:scroll;
+    position: relative;
+    left: -2rem;
+    margin-right: 5rem;
+    margin-bottom: 3rem;
+    animation: slide 3s steps(4) infinite linear;
+  }
+  #more-projects-btn{
+    width: 190px;
+    left: 4rem;
+  }
+}
+@media screen and (max-width: 400px){
+  .left-block{
+    margin: 0;
+  }
+  #more-projects-btn{
+    left: 2rem;
+  }
+}
+
+
+@keyframes slide {
+  100% {
+    top: -300px;
+  }
+}
+
+@keyframes colorFlip {
+  0%{
+    background-image: linear-gradient(360deg, black, #757575);
+  }
+  50% {
+    background-image: linear-gradient(180deg, black, #757575);
+  }
+  100%{
+    background-image: linear-gradient(360deg, black, #757575);
+  }
 }
 
 #intro-text{

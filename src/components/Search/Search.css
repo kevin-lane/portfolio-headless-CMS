@@ -5,10 +5,33 @@
 }
 
 #search-container{
-  width: 60%;
+  width: 73%;
 }
 
 #search-button{
   height: fit-content;
   background-color: black;
+}
+
+#dropdownBtn{
+  border-radius: 0;
+  background-image: linear-gradient(90deg, #6C6C6C, #2A2A2A);
+}
+
+#dropdownMenu{
+  display: none;
+}
+
+.input-group{
+  position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    /* align-items: stretch; */
+    width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  #search-container {
+    width: 88%;
+}
 }

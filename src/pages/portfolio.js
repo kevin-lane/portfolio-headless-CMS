@@ -7,6 +7,7 @@ import { Helmet } from "react-helmet";
 import Search from "../components/Search/Search.js";
 import { useState } from "react";
 
+
 //sidans namn blir portfolio efter namnet på javascript-filen
 const SecondPage = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -16,7 +17,7 @@ const SecondPage = () => {
 
   //Function that only shows the searched items when user clicks on search button and sets filtered to true
   function handleSearch(event){
-    setFilteredItems(data.allContentfulCourse.edges.filter((edge) => {
+    setFilteredItems(allItems.filter((edge) => {
       return edge.node.title.toLowerCase().includes(searchQuery);
     }));
     setFiltered(true);
@@ -24,25 +25,43 @@ const SecondPage = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      allContentfulCourse {
-        edges {
-          node {
-            title
-            description {
-              description
-            }
-            image {
-              gatsbyImageData(width: 400, height: 200)
-            }
-          }
+  allContentfulCourse {
+    edges {
+      node {
+        title
+        description {
+          description
+        }
+        category
+        image {
+          gatsbyImageData(width: 400, height: 200)
         }
       }
+    }
+  }
+  allContentfulProject {
+    edges {
+      node {
+        title
+        description {
+          description
+        }
+        technologies
+        gitHub
+        liveDemo
+        category
+        image {
+          gatsbyImageData(width: 400, height: 200)
+        }
+      }
+    }
+  }
     }
   `)
 
   //Populating all the items on render using hook useEffect
   useEffect(() => {
-    setAllItems(data.allContentfulCourse.edges);
+    setAllItems([...data.allContentfulProject.edges, ...data.allContentfulCourse.edges]);
   }, [])
 
   return (
@@ -70,6 +89,7 @@ const SecondPage = () => {
                   image={edge.node.image === null ? "" : edge.node.image[0].gatsbyImageData}
                   title={edge.node.title}
                   description={edge.node.description.description}
+                  category={edge.node.category[0]}
                 />
               </Link>
             )
@@ -83,6 +103,7 @@ const SecondPage = () => {
                   image={edge.node.image === null ? "" : edge.node.image[0].gatsbyImageData}
                   title={edge.node.title}
                   description={edge.node.description.description}
+                  category={edge.node.category[0]}
                 />
               </Link>
             )

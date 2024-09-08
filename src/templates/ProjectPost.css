@@ -11,6 +11,15 @@
 
 #info-heading{
   font-family: 'koulen';
+  font-size: xx-large;
+  position: relative;
+  top: 1rem;
+}
+
+#tech-heading{
+  font-family: 'koulen';
+  position: relative;
+  left: -1rem;
 }
 
 #info-text{
@@ -21,4 +30,109 @@
   position: relative;
   overflow: hidden;
   margin-top: 2rem;
+}
+
+#live-btn, #github-btn{
+  width: 180px;
+  height: 50px;
+  position: relative;
+  margin: 0 3rem 0 0;
+  font-family: 'koulen';
+  font-size: x-large;
+  color: white;
+  border: 1px solid white;
+}
+#live-btn{
+  animation: colorLiveAnimation 3s infinite;
+  background-image: linear-gradient(90deg, #DCFF02, black);
+}
+#github-btn{
+  animation: colorGithubAnimation 3s infinite;
+  background-image: linear-gradient(90deg, #0267FF, black);
+}
+#technology-card{
+  background-color: #8F9B43;
+  font-family: 'koulen';
+  font-size: x-large;
+  width: 150px;
+  text-align: center;
+  margin: 1rem;
+}
+.right-section{
+  margin: 3rem;
+}
+
+#tech-card-items{
+  list-style-type: none;
+  display: inline-flex;
+  position: relative;
+  left: -2rem;
+}
+
+@media screen and (max-width:1033px) {
+  #live-btn{
+    position: relative;
+    bottom: 1rem;
+  }
+  #project-post{
+    text-align: center;
+  }
+  .right-section{
+    position: relative;
+    left: 1rem;
+  }
+  /* .post-blocks{
+    width: 40%;
+    display: inline-table;
+    vertical-align: top;
+  } */
+  /* #tech-cards{
+    position: relative;
+    left: -3rem;
+  } */
+  #tech-card-items{
+    list-style-type: none;
+    display: block;
+    position: relative;
+  }
+}
+
+@media screen and (max-width:400px) {
+  #info-container{
+    position: relative;
+    left: -2rem;
+  }
+  .right-section{
+    position: relative;
+    left: 3rem;
+  }
+}
+
+.left-texts{
+  position: relative;
+  top: 3rem;
+}
+/* Animations for the buttons */
+@keyframes colorLiveAnimation {
+  0%{
+    background-image: linear-gradient(180deg, #DCFF02, black);
+  }
+  50% {
+    background-image: linear-gradient(180deg, #DCFF02, black);
+  }
+  100%{
+    background-image: linear-gradient(360deg, #DCFF02, black);
+  }
+}
+
+@keyframes colorGithubAnimation {
+  0%{
+    background-image: linear-gradient(180deg, #0267FF, black);
+  }
+  50% {
+    background-image: linear-gradient(180deg, #0267FF, black);
+  }
+  100%{
+    background-image: linear-gradient(360deg, #0267FF, black);
+  }
 }
