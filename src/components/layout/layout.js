@@ -7,7 +7,7 @@ import NavbarMobile from "../Navbar/NavbarMobile";
 //Toggle between different types of navbar depending of device
 function responsiveNavbar(){
   if (typeof window !== "undefined") {
-    if (window.screen.width < 900) {
+    if (window.screen.width < 1226) {
       return <NavbarMobile />
     }
     else return <Navbar />
