@@ -28,6 +28,10 @@
   color: white;
   border: none;
 }
+/* Solve problem with profile picture put it self to left when in production */
+.gatsby-image-wrapper-constrained {
+  display: block;
+}
 
 @media screen and (max-width: 580px) {
   .profile-card{
