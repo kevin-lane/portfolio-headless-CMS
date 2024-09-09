@@ -30,6 +30,7 @@ export default function Search(props) {
             <li><a class="dropdown-item" href="#project">Projects</a></li>
             <li><a class="dropdown-item" href="#course">Courses</a></li>
           </ul>
+
         </div>
         <button class="btn btn-primary" type="button" id="search-button"  data-mdb-ripple-color="dark"
           onClick={props.searchClick}>
