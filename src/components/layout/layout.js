@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../css/style.css';
 import Navbar from "../Navbar/Navbar";
 import NavbarMobile from "../Navbar/NavbarMobile";
+import Footer from "../Footer/Footer";
 
 //Toggle between different types of navbar depending of device
 function responsiveNavbar(){
@@ -21,6 +22,7 @@ const Layout = ({ children }) => (
       </header>
       <main>{children}</main>
       <footer>
+        <Footer />
       </footer>
     </>
 )

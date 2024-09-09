@@ -1,7 +1,14 @@
 #footer{
   width: 100vw;
+  position: fixed;
   bottom: 0;
-  /* height: 89px; */
+  left: 0;
+  background-color: black;
+  border-top: 2px solid rgba(255, 255, 255, 0.342);
+}
+span{
+  display: block;
   text-align: center;
-
+  font-family: 'koulen';
+  font-size:large
 }
