@@ -6,6 +6,8 @@
 
 #search-container{
   width: 73%;
+  position: relative;
+  top: 0.5rem;
 }
 
 #search-button{
