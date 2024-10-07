@@ -22,7 +22,7 @@ body{
 
 /* For the start-page */
 .home-blocks{
-  float: left;
+  float: right;
   width: 45%;
   margin: 2rem;
 }
