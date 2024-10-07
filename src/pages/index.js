@@ -78,6 +78,8 @@ const IndexPage = () => {
         <Link style={{ textDecoration: 'none' }} to='/portfolio'><button id='more-projects-btn'>More Projects</button></Link>
       </div>
       <div className='home-blocks'>
+        {console.log(data.contentfulStartPage.image.gatsbyImageData)
+        }
         <ProfileCard
           image={data.contentfulStartPage.image.gatsbyImageData}
           name="Kevin Lane"
