@@ -89,7 +89,6 @@ const SecondPage = () => {
                   image={edge.node.image === null ? "" : edge.node.image[0].gatsbyImageData}
                   title={edge.node.title}
                   description={edge.node.description.description}
-                  category={edge.node.category[0]}
                 />
               </Link>
             )
@@ -103,7 +102,6 @@ const SecondPage = () => {
                   image={edge.node.image === null ? "" : edge.node.image[0].gatsbyImageData}
                   title={edge.node.title}
                   description={edge.node.description.description}
-                  category={edge.node.category[0]}
                 />
               </Link>
             )

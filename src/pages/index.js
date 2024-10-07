@@ -49,11 +49,14 @@ const IndexPage = () => {
 
   return (
     <Layout>
+       <div>
       {/* Added Helmet for SEO Reasons */}
       <Helmet>
         <title>HOME | Kevin Lane</title>
         <meta name="description" content="Home Page" />
       </Helmet>
+
+
 
       <div className='home-blocks'>
         <div style={{ marginBottom: '2rem', marginTop: '2rem' }} className="left-block">
@@ -80,6 +83,7 @@ const IndexPage = () => {
           name="Kevin Lane"
           location="Stockholm"
         />
+      </div>
       </div>
     </Layout>
   )
